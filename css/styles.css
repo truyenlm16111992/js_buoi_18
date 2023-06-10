@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    font-family: 'Lora', serif;
+    background: #fff;
+    font-size: 16px;
+}
+.box{
+    background: #ecf0f3;
+    border-radius: 5px;
+    /* box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07); */
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, .2), -1px -1px 10px 0px rgba(0, 0, 0, .2);
+}
+
+/* Page Detail  */
+.pagedetail{
+    padding: 20px 12px;
+}
+.pagedetail p{
+    margin: 5px 0;
+}
+.pagedetail .pagedetail__icon{
+    margin-right: 0.5rem;
+}
+.pagedetail ul{
+    padding-left: 40px;
+    margin: 5px 0;
+}
+.pagedetail__notice,
+.pagedetail__hint,
+.pagedetail__modelblock{
+    padding: 10px 10px;
+    border: 1px solid #eee;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+    border-left-color: #f0ad4e;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .2);
+    width: 100%;
+}
+.pagedetail__notice{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.pagedetail__hint{
+    border-left-color: #5bc0de;
+}
+.pagedetail__notice .pagedetail__icon{
+    color: red;
+}
+.pagedetail__form button,
+.pagedetail__exam .card-body button{
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+.pagedetail__exam .btn-link{
+    color: black;
+}
+.pagedetail__exam .btn-link:hover,
+.pagedetail__exam .btn-link:focus,
+.pagedetail__exam .btn-link[aria-expanded=true]{
+    color: rgb(0, 123, 255);
+}
+.pagedetail__modelitem{
+    padding: 0 5px;
+}
+.pagedetail__model .pagedetail__modelblock{
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
+    border-left-color: #1e8e25;
+}
+.pagedetail .pagedetail__modelblock ul{
+    padding-left: 20px;
+}
+.pagedetail .pagedetail__modelblock h6{
+    font-weight: 600;
+}
+/* Accordion Collapse */
+.accordion button:focus,
+.accordion button:active,
+.accordion button:hover {
+    box-shadow: none !important;
+    text-decoration: none!important;
+}
+/* .accordion button,
+
+.accordion .card,
+.accordion .card-header{
+    background: transparent;
+    border: none;
+} */
+.accordion button {
+    position: relative;
+}
+.accordion .card-header button span:first-child{
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: #fff;
+    background-color: #00A6ED;
+    padding: 3px 7px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .2);
+    display: inline;
+}
+.accordion button::before{
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
+}
+.accordion button[aria-expanded=false]::before{
+    content: "\f35b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.accordion button[aria-expanded=true]::before{
+    content: "\f358";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 600px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 600px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 600px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 900px;
+    }
+}
+
+
