@@ -64,8 +64,8 @@ function getLastEvenNumber(_arrNumbers) {
     //         even = e;
     // });
     // return even;
-    for(let i=_arrNumbers.length-1;i>=0;i--){
-        if(_arrNumbers[i]%2==0)
+    for (let i = _arrNumbers.length - 1; i >= 0; i--) {
+        if (_arrNumbers[i] % 2 == 0)
             return _arrNumbers[i];
     }
     return -1;
@@ -98,7 +98,7 @@ document.getElementById("btnExecute_b6").onclick = function () {
 // Bài 7
 document.getElementById("btnExecute_b7").onclick = function () {
     let domResult = document.getElementById("result_b7");
-    arrNumbers.sort();
+    arrNumbers.sort((a, b) => { return a - b; });
     loadNumberList(arrNumbers, "result_b7");
     domResult.innerHTML = "Mảng sau khi sắp xếp: " + domResult.innerHTML;
 }
@@ -130,27 +130,27 @@ function getFirstPrimeNumber(_arrNumbers) {
     return -1;
 }
 document.getElementById("btnExecute_b8").onclick = function () {
-    let primeNumber=getFirstPrimeNumber(arrNumbers);
-    document.getElementById("result_b8").innerHTML = (primeNumber==-1?"Không có số nguyên tố":"Số nguyên tố đầu tiên trong dãy: "+primeNumber.toString());
+    let primeNumber = getFirstPrimeNumber(arrNumbers);
+    document.getElementById("result_b8").innerHTML = (primeNumber == -1 ? "Không có số nguyên tố" : "Số nguyên tố đầu tiên trong dãy: " + primeNumber.toString());
 }
 // Bài 9
-function getNumberOfIntegers(_arrNumbers){
-    return _arrNumbers.filter(e=>Number.isInteger(e)).length;
+function getNumberOfIntegers(_arrNumbers) {
+    return _arrNumbers.filter(e => Number.isInteger(e)).length;
 }
-document.getElementById("btnExecute_b9").onclick = function(){
-    document.getElementById("result_b9").innerHTML = "Số nguyên: "+getNumberOfIntegers(arrNumbers);
+document.getElementById("btnExecute_b9").onclick = function () {
+    document.getElementById("result_b9").innerHTML = "Số nguyên: " + getNumberOfIntegers(arrNumbers);
 }
 // Bài 10
-function getResultOfComparingNumPosAndNeg(_arrNumbers){
-    let numPos=_arrNumbers.filter(e=>e>0).length;
-    let numNeg=_arrNumbers.filter(e=>e<0).length;
-    let operator="=";
-    if(numPos>numNeg)
-        operator=">";
-    else if(numPos<numNeg)
-        operator="<";
-    return "Số dương "+ operator + " Số âm";
+function getResultOfComparingNumPosAndNeg(_arrNumbers) {
+    let numPos = _arrNumbers.filter(e => e > 0).length;
+    let numNeg = _arrNumbers.filter(e => e < 0).length;
+    let operator = "=";
+    if (numPos > numNeg)
+        operator = ">";
+    else if (numPos < numNeg)
+        operator = "<";
+    return "Số dương("+numPos.toString()+") " + operator + " Số âm("+numNeg.toString()+")";
 }
-document.getElementById("btnExecute_b10").onclick = function(){
+document.getElementById("btnExecute_b10").onclick = function () {
     document.getElementById("result_b10").innerHTML = getResultOfComparingNumPosAndNeg(arrNumbers);
 }
